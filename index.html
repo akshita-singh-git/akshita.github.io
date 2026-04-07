@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akshita Singh — AI & IoT Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Chart.js for live data graph -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+  <!-- Google Fonts: Orbitron (display) + Syne (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ─────────────────────────────────────────
+       NAVBAR
+  ───────────────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">A<span class="accent">S</span></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"     class="nav-link">Home</a></li>
+      <li><a href="#about"    class="nav-link">About</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#livedata" class="nav-link">Live&nbsp;Data</a></li>
+      <li><a href="#contact"  class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─────────────────────────────────────────
+       HOME SECTION
+  ───────────────────────────────────────── -->
+  <section class="section" id="home">
+    <!-- Animated grid background -->
+    <div class="grid-bg" aria-hidden="true"></div>
+    <!-- Floating orbs -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+
+    <div class="home-content">
+      <p class="home-greeting">Hello, World! 👾</p>
+      <h1 class="home-name">
+        Akshita<br /><span class="accent-text">Singh</span>
+      </h1>
+      <!-- Typewriter tagline -->
+      <p class="home-tagline">
+        <span id="typewriter"></span><span class="cursor">|</span>
+      </p>
+      <div class="home-cta">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact"  class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       ABOUT SECTION
+  ───────────────────────────────────────── -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">About <span class="accent">Me</span></h2>
+
+      <div class="about-grid">
+        <!-- Bio column -->
+        <div class="about-bio reveal">
+          <p>
+            <p>
+I am Akshita Singh, an aspiring <strong>AI Engineer</strong> and IoT developer passionate about building intelligent systems that connect the physical world with data.
+</p>
+
+<p>
+I have worked on multiple IoT-based projects involving sensors, automation, and real-time data visualization using platforms like ThingSpeak. My focus is on combining hardware with software to create practical, real-world solutions.
+</p>
+
+<p>
+Currently, I am exploring Machine Learning and working towards building systems that are not just smart, but also impactful.
+</p>
+          </p>
+          <p>
+            From training machine-learning models to wiring up Arduino circuits,
+            I'm driven by the idea that smart devices can make everyday life
+            safer, cleaner, and more efficient.
+          </p>
+          <div class="about-stats">
+            <div class="stat"><span class="stat-num">3+</span><span>Projects</span></div>
+            <div class="stat"><span class="stat-num">5+</span><span>Skills</span></div>
+            <div class="stat"><span class="stat-num">∞</span><span>Curiosity</span></div>
+          </div>
+        </div>
+
+        <!-- Skills column -->
+        <div class="about-skills reveal delay-1">
+          <h3 class="skills-heading">Tech Stack</h3>
+          <div class="skill-bars">
+            <div class="skill-item" data-pct="90">
+              <span class="skill-name">Python</span>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-item" data-pct="80">
+              <span class="skill-name">Arduino / C++</span>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-item" data-pct="75">
+              <span class="skill-name">IoT & Sensors</span>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-item" data-pct="70">
+              <span class="skill-name">Data Visualisation</span>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+            <div class="skill-item" data-pct="65">
+              <span class="skill-name">Machine Learning</span>
+              <div class="skill-track"><div class="skill-fill"></div></div>
+            </div>
+          </div>
+
+          <!-- Pill tags -->
+          <div class="skill-pills">
+            <span class="pill">Python</span>
+            <span class="pill">Arduino</span>
+            <span class="pill">IoT</span>
+            <span class="pill">Sensors</span>
+            <span class="pill">Data&nbsp;Viz</span>
+            <span class="pill">ML</span>
+            <span class="pill">MQTT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       PROJECTS SECTION
+  ───────────────────────────────────────── -->
+  <section class="section section-dark" id="projects">
+    <div class="container">
+      <h2 class="section-title">My <span class="accent">Projects</span></h2>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card reveal">
+          <div class="card-img-wrap">
+            <!-- SVG placeholder: sanitizer -->
+            <svg class="card-img" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-label="Smart Sanitizer System illustration">
+              <rect width="400" height="220" fill="#0d1117"/>
+              <!-- Dispenser body -->
+              <rect x="160" y="40" width="80" height="130" rx="12" fill="#1a2236" stroke="#00d4ff" stroke-width="1.5"/>
+              <rect x="175" y="55" width="50" height="30" rx="6" fill="#0a1628" stroke="#00d4ff" stroke-width="1"/>
+              <!-- Sensor indicator -->
+              <circle cx="200" cy="175" r="10" fill="#00d4ff" opacity="0.3"/>
+              <circle cx="200" cy="175" r="5"  fill="#00d4ff"/>
+              <!-- Droplets -->
+              <ellipse cx="200" cy="200" rx="4" ry="6" fill="#00d4ff" opacity="0.7"/>
+              <ellipse cx="190" cy="205" rx="3" ry="5" fill="#00d4ff" opacity="0.5"/>
+              <ellipse cx="210" cy="207" rx="3" ry="5" fill="#00d4ff" opacity="0.5"/>
+              <!-- Wifi arcs -->
+              <path d="M170 90 Q200 70 230 90" stroke="#7c3aed" stroke-width="2" fill="none" opacity="0.8"/>
+              <path d="M155 80 Q200 55 245 80" stroke="#7c3aed" stroke-width="2" fill="none" opacity="0.5"/>
+              <!-- Label -->
+              <text x="200" y="25" text-anchor="middle" fill="#00d4ff" font-size="11" font-family="monospace" opacity="0.7">SENSOR ACTIVE</text>
+            </svg>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">IoT · Health</span>
+            <h3 class="card-title">Smart Sanitizer System</h3>
+            <p class="card-desc">
+              A touchless sanitizer dispenser driven by an IR proximity sensor and
+              Arduino. Auto-triggers a pump motor on hand detection — cutting cross-contamination
+              in public spaces.
+            </p>
+            <div class="card-techs">
+              <span>Arduino</span><span>IR Sensor</span><span>C++</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal delay-1">
+          <div class="card-img-wrap">
+            <svg class="card-img" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-label="Rain Detection System illustration">
+              <rect width="400" height="220" fill="#0d1117"/>
+              <!-- Cloud -->
+              <ellipse cx="200" cy="80" rx="70" ry="38" fill="#1a2236" stroke="#7c3aed" stroke-width="1.5"/>
+              <ellipse cx="165" cy="90" rx="45" ry="30" fill="#1a2236" stroke="#7c3aed" stroke-width="1.5"/>
+              <ellipse cx="235" cy="90" rx="45" ry="30" fill="#1a2236" stroke="#7c3aed" stroke-width="1.5"/>
+              <!-- Rain drops -->
+              <line x1="160" y1="118" x2="150" y2="145" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+              <line x1="185" y1="120" x2="175" y2="147" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+              <line x1="210" y1="118" x2="200" y2="145" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+              <line x1="235" y1="120" x2="225" y2="147" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+              <!-- Sensor board -->
+              <rect x="140" y="160" width="120" height="35" rx="6" fill="#1a2236" stroke="#7c3aed" stroke-width="1"/>
+              <circle cx="165" cy="177" r="5" fill="#7c3aed"/>
+              <circle cx="200" cy="177" r="5" fill="#7c3aed"/>
+              <circle cx="235" cy="177" r="5" fill="#7c3aed"/>
+              <text x="200" y="210" text-anchor="middle" fill="#7c3aed" font-size="10" font-family="monospace" opacity="0.8">RAIN DETECTED</text>
+            </svg>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">IoT · Weather</span>
+            <h3 class="card-title">Rain Detection System</h3>
+            <p class="card-desc">
+              Uses a capacitive rain-sensor module with Arduino to detect rainfall in
+              real time, triggering alerts and automated responses like closing windows
+              or activating irrigation valves.
+            </p>
+            <div class="card-techs">
+              <span>Rain Sensor</span><span>Arduino</span><span>Python</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card reveal delay-2">
+          <div class="card-img-wrap">
+            <svg class="card-img" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-label="Water Level Monitoring System illustration">
+              <rect width="400" height="220" fill="#0d1117"/>
+              <!-- Tank outline -->
+              <rect x="130" y="30" width="140" height="160" rx="8" fill="#0a1628" stroke="#00d4ff" stroke-width="1.5"/>
+              <!-- Water fill animated via CSS class -->
+              <rect class="water-fill-svg" x="131" y="110" width="138" height="79" rx="0 0 7 7" fill="#00d4ff" opacity="0.25"/>
+              <!-- Water level line -->
+              <line x1="130" y1="110" x2="270" y2="110" stroke="#00d4ff" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <!-- Level markers -->
+              <text x="118" y="55"  text-anchor="end" fill="#7c3aed" font-size="10" font-family="monospace">HIGH</text>
+              <text x="118" y="115" text-anchor="end" fill="#00d4ff" font-size="10" font-family="monospace">MID</text>
+              <text x="118" y="185" text-anchor="end" fill="#7c3aed" font-size="10" font-family="monospace">LOW</text>
+              <!-- Sensor probe -->
+              <rect x="185" y="25" width="4" height="170" rx="2" fill="#7c3aed" opacity="0.6"/>
+              <circle cx="187" cy="110" r="6" fill="#7c3aed"/>
+              <text x="200" y="210" text-anchor="middle" fill="#00d4ff" font-size="10" font-family="monospace" opacity="0.8">LEVEL: 52%</text>
+            </svg>
+          </div>
+          <div class="card-body">
+            <span class="card-tag">IoT · Automation</span>
+            <h3 class="card-title">Water Level Monitoring</h3>
+            <p class="card-desc">
+              Ultrasonic / float-sensor array connected to an ESP8266 that streams
+              tank-level readings to a live dashboard. Sends SMS/email alerts when
+              levels fall below a safe threshold.
+            </p>
+            <div class="card-techs">
+              <span>ESP8266</span><span>Ultrasonic</span><span>MQTT</span>
+            </div>
+          </div>
+        </article>
+        <article class="project-card reveal">
+  <div class="card-body">
+    <span class="card-tag">IoT · Data</span>
+    <h3 class="card-title">IoT Data Visualization Dashboard</h3>
+    <p class="card-desc">
+      Built a real-time dashboard using ThingSpeak to visualize sensor data such as temperature and water levels. Implemented live graphs and analytics to monitor environmental conditions remotely.
+    </p>
+    <div class="card-techs">
+      <span>ThingSpeak</span><span>IoT</span><span>Data Visualization</span>
+    </div>
+  </div>
+</article>
+<article class="project-card reveal">
+  <div class="card-body">
+    <span class="card-tag">IoT · Automation</span>
+    <h3 class="card-title">Smart Environment Monitoring System</h3>
+    <p class="card-desc">
+      Integrated multiple sensors to monitor environmental conditions like temperature, water level, and rain detection in a single system. Enabled automated responses and real-time alerts.
+    </p>
+    <div class="card-techs">
+      <span>Arduino</span><span>Sensors</span><span>Automation</span>
+    </div>
+  </div>
+</article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       LIVE DATA SECTION
+  ───────────────────────────────────────── -->
+  <section class="section" id="livedata">
+    <div class="container">
+      <h2 class="section-title">Live <span class="accent">Sensor Data</span></h2>
+      <p class="section-sub">Simulated IoT telemetry — temperature &amp; water-level readings updated every 2 s</p>
+
+      <div class="dashboard-grid">
+
+        <!-- Stat cards -->
+        <div class="stat-cards">
+          <div class="stat-card reveal">
+            <div class="stat-icon">🌡️</div>
+            <div>
+              <div class="stat-label">Temperature</div>
+              <div class="stat-value" id="tempVal">--°C</div>
+            </div>
+          </div>
+          <div class="stat-card reveal delay-1">
+            <div class="stat-icon">💧</div>
+            <div>
+              <div class="stat-label">Water Level</div>
+              <div class="stat-value" id="waterVal">--%</div>
+            </div>
+          </div>
+          <div class="stat-card reveal delay-2">
+            <div class="stat-icon">🌧️</div>
+            <div>
+              <div class="stat-label">Rain Status</div>
+              <div class="stat-value" id="rainVal">--</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chart -->
+        <div class="chart-card reveal">
+          <canvas id="sensorChart"></canvas>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       CONTACT SECTION
+  ───────────────────────────────────────── -->
+  <section class="section section-dark" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get in <span class="accent">Touch</span></h2>
+      <p class="section-sub">Have a project idea or want to collaborate? Drop a message!</p>
+
+      <div class="contact-grid">
+
+        <!-- Info column -->
+        <div class="contact-info reveal">
+          <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <div class="contact-label">Email</div>
+              <a href="mailto:akshita@example.com" class="contact-val">akshitasingh424@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🐙</span>
+            <div>
+              <div class="contact-label">GitHub</div>
+              <a href="#" class="contact-val">https://github.com/akshita-singh-git</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">💼</span>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              <a href="#" class="contact-val">https://www.linkedin.com/in/akshita-singh-717934324/</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form column -->
+        <form class="contact-form reveal delay-1" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text"  id="name"    name="name"    placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email"   name="email"   placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary full-w">Send Message 🚀</button>
+          <p class="form-feedback" id="formFeedback"></p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       FOOTER
+  ───────────────────────────────────────── -->
+  <footer class="footer">
+    <p>Designed &amp; built by <span class="accent">Akshita Singh</span> · 2025</p>
+    <p class="footer-sub">AI &amp; IoT Developer in the Making</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
